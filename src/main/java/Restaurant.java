@@ -74,13 +74,13 @@ public class Restaurant {
         return name;
     }
 
-//        public int orderValue(List<String> order) {
-//            int totalValue = 0;
-//            for(String myItem : order) {
-//                totalValue += findItemByName(myItem).getPrice();
-//
-//            }
-//            return totalValue;
-//        }
+        public int orderValue(List<String> order) {
+                     int totalValue = 0;
+            for(String myItem : order) {
+                totalValue += findItemByName(myItem).getPrice();
+
+            }
+            return totalValue;
+        }
 
 }
