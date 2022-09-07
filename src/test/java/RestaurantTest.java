@@ -5,6 +5,7 @@ import org.mockito.Mockito;
 import java.time.LocalTime;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 class RestaurantTest {
@@ -63,4 +64,11 @@ class RestaurantTest {
                 ()->restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    @Test
+    public void checking_total_of_all_the_cart_items() {
+        List<String> order = Arrays.asList("Sweet corn soup", "Vegetable lasagne");
+        int totalValue = restaurant.orderValue(order);
+        assertEquals(388, totalValue);
+
+    }
 }
